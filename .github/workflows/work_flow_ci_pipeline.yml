@@ -15,6 +15,13 @@ env:
 jobs:
     unit-testing:
         name: Unit Testing
+        strategy:
+            matrix:
+                nodejs_version: [18, 19, 20]
+                operating_system: [ubuntu-latest, linux]
+                exclude: 
+                    - nodejs_version: 18
+                    opertaing_system: linux
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repository
