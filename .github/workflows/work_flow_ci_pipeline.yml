@@ -69,7 +69,7 @@ jobs:
             
               
             - name: Archive Test Result
-              if: steps.nodejs_unit_test_step.outcome == 'failure' && steps.nodejs_unit_test_step.outcome == 'success':
+              if: steps.nodejs_unit_test_step.outcome == 'failure' && steps.nodejs_unit_test_step.outcome == 'success'
               uses: actions/upload-artifact@v3
               with:
                 name: Code-Coverage-Result
