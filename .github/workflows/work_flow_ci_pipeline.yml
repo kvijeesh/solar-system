@@ -21,7 +21,7 @@ jobs:
                 operating_system: [ubuntu-latest, linux]
                 exclude: 
                     - nodejs_version: 18
-                    opertaing_system: linux
+                      operating_system: linux
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repository
