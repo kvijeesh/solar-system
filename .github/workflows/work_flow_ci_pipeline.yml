@@ -75,7 +75,7 @@ jobs:
               run: npm test
             
             - name: Check Code Coverage
-              #continue-on-error: true
+              continue-on-error: true
               id: nodejs_unit_test_step
               run: npm run coverage
             
