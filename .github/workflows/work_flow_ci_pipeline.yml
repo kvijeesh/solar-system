@@ -119,7 +119,7 @@ jobs:
                   -e MONGO_URI: $MONGO_URI \
                   -e MONGO_USERNAME: $MONGO_USERNAME \
                   -e MONGO_PASSWORD: $MONGO_PASSWORD \
-                  ${{ env.DOCKERHUB_USERNAME }}/github-test:${{github.sha}}
+                  ${{ vars.DOCKERHUB_USERNAME }}/github-test:${{github.sha}}
                 export IP=$(docker inspect -f '{{ range.NetworkSettings.Networks}}{{.IPAddress}}{{end}})' github-test)
                 echo $IP
                 
