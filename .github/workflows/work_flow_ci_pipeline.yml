@@ -92,6 +92,8 @@ jobs:
     docker:
         name: Containarization
         needs: [code-coverage, unit-testing]
+        permissions: 
+          packages: write
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repository  
