@@ -102,7 +102,7 @@ jobs:
               with:
                 registry: docker.na1.hsdp.io
                 username: ${{ vars.DOCKERHUB_USERNAME }}
-                password: ${{ secrets.DOCKERHUB_PASSWORD }}
+                password: ${{ secrets.GITHUB_TOKEN }}
             
             - name: Docker build for testing 
               uses:  docker/build-push-action@v4
@@ -126,7 +126,7 @@ jobs:
               with:
                 context: .
                 push: true
-                tags: ${{ vars.DOCKERHUB_USERNAME }}/github-test:${{github.sha}}
+                tags: docker.na1.hsdp.io/${{ github.repository_owner }}/github-test:${{github.sha}}
               
                 
 
